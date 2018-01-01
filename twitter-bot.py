@@ -6,7 +6,7 @@ def twitter_bot():
     argfile = str(sys.argv[1])
 
     # number of seconds to wait until next tweet
-    seconds = sys.argv[2]
+    seconds = int(sys.argv[2])
 
     # establish connection to twitter api
     auth = tweepy.OAuthHandler(config.CONSUMER_KEY, config.CONSUMER_SECRET)
