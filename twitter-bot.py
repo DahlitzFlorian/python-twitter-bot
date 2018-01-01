@@ -5,6 +5,9 @@ def twitter_bot():
     # file from which to read tweets in
     argfile = str(sys.argv[1])
 
+    # number of seconds to wait until next tweet
+    seconds = sys.argv[2]
+
     # establish connection to twitter api
     auth = tweepy.OAuthHandler(config.CONSUMER_KEY, config.CONSUMER_SECRET)
     auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_SECRET)
@@ -19,7 +22,7 @@ def twitter_bot():
     for tweet in tweets:
         tweet = tweet.strip()
         api.update_status(tweet)
-        time.sleep(900) # update status every 15 minutes
+        time.sleep(seconds) # update status every 15 minutes
 
 
 if __name__ == "__main__":
