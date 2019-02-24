@@ -1,6 +1,7 @@
 import tweepy, time, sys
 import config
 
+
 def twitter_bot():
     # file from which to read tweets in
     argfile = str(sys.argv[1])
@@ -17,12 +18,12 @@ def twitter_bot():
     with open(argfile, "r") as file:
         content = file.read()
         tweets = content.split("§§§")
-    
+
     # publish the tweets
     for tweet in tweets:
         tweet = tweet.strip()
         api.update_status(tweet)
-        time.sleep(seconds) # update status every 15 minutes
+        time.sleep(seconds)  # update status every 15 minutes
 
 
 if __name__ == "__main__":
