@@ -1,0 +1,10 @@
+First tweet this day!
+
+#100DaysOfCode | #coding | #Python
+
+§§§
+
+Second tweet, which is separated by the first one using the given separator!
+Coding is fun.
+
+#coding | #Python
